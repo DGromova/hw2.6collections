@@ -35,10 +35,10 @@ public class Main {
         System.out.println();
     }
     private static void task4() {
+        Map<String, Integer> allWords = new HashMap<>();
         for (int i = 0; i < words.size(); i++) {
-            if(Collections.frequency(words, words.get(i)) > 1) {
-                    System.out.println(Collections.frequency(words, words.get(i)));
-            }
+            allWords.put(words.get(i), Collections.frequency(words, words.get(i)));
         }
+        System.out.println(allWords);
     }
 }
